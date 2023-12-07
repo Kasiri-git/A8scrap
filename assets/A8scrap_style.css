@@ -1,0 +1,74 @@
+/* A8scrap_style.css */
+
+/* テーブル全体のスタイル */
+.A8scrap-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* テーブルヘッダーのスタイル */
+.A8scrap-table th {
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* テーブルセルのスタイル */
+.A8scrap-table td {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px;
+}
+
+/* ボタンのスタイル */
+#start-scraping {
+  display: inline-block;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+#start-scraping:hover {
+  background-color: #45a049;
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end; /* 修正: 下揃えに */
+  margin-top: 20px;
+}
+
+.download-buttons a {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: 1px solid #333;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.download-buttons a:hover {
+  background-color: #ddd;
+}
+
+.button-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
