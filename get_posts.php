@@ -15,7 +15,7 @@ function get_links_from_posts() {
     foreach ($posts as $post) {
         $content = $post->post_content;
         $pattern_text = '/<a\s[^>]*?href=[\'"]([^\'"]+)[\'"][^>]*?>(.*?)<\/a>/'; // テキストリンクの抽出用正規表現パターン
-        $pattern_img = '/<img\s[^>]*?src=[\'"]([^\'"]+mid=([^&"\']+))/'; // 画像リンクの抽出用正規表現パターン
+        $pattern_img = '/<img\s[^>]*?src=[\'"]([^\'"]+mid=s(\d{14}))/'; // 画像リンクの抽出用正規表現パターン
 
         $text_links = array();
         $img_links = array();
@@ -32,7 +32,9 @@ function get_links_from_posts() {
         preg_match_all($pattern_img, $content, $matches_img, PREG_SET_ORDER);
         if (!empty($matches_img)) {
             foreach ($matches_img as $match) {
-                $img_links[] = array('url' => $match[1], 'program_id' => $match[2]);
+                // プログラムIDを左から15桁分取得する（sを含む）
+                $program_id = 's' . $match[2];
+                $img_links[] = array('url' => $match[1], 'program_id' => $program_id);
             }
         }
 

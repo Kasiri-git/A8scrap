@@ -2,7 +2,7 @@
 /*
 Plugin Name: A8scrap
 Description: 投稿済み記事からリンクを抽出するプラグイン
-Version: 1.0.0
+Version: 1.0.1
 Author: Kasiri
 Author URI: https://kasiri.icu
 Plugin URI: https://kasiri.icu/a8scrap-download
